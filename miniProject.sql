@@ -105,3 +105,12 @@ WHERE course_id = 2;
 UPDATE Scores
 SET final_score = 10
 WHERE student_id = 5 AND course_id = 5;
+
+
+-- 1. Xóa kết quả học tập trước (nếu có)
+DELETE FROM Scores
+WHERE student_id = ? AND course_id = ?;
+
+-- 2. Xóa lượt đăng ký học không hợp lệ
+DELETE FROM Enrollments
+WHERE student_id = ? AND course_id = ?;
