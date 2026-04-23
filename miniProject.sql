@@ -90,3 +90,18 @@ VALUES
 (3, 3, 5.5, 6.0),
 (4, 4, 9.0, 9.5),
 (5, 5, 7.0, 7.5);
+
+
+-- cập nhật email, mô tả, điểm
+
+UPDATE Students
+SET email = 'nguyennamdeptrais1tg@gmail.com'
+WHERE student_id = 1;
+
+UPDATE Courses
+SET course_description = 'Nhập môn Java'
+WHERE course_id = 2;
+
+UPDATE Scores
+SET final_score = 10
+WHERE student_id = 5 AND course_id = 5;
