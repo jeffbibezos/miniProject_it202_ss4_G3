@@ -47,4 +47,46 @@ CREATE TABLE Scores (
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
 
+-- thêm dữ liệu
 
+INSERT INTO Students (full_name, dob, email)
+VALUES
+('Nguyễn Nam', '2003-05-10', 'nam@gmail.com'),
+('Trần Lan', '2002-08-15', 'lan@gmail.com'),
+('Lê Lợi', '2003-01-20', 'loi@gmail.com'),
+('Nguyễn Du', '2001-12-05', 'du@gmail.com'),
+('Đinh Tiên Hoàng', '2002-03-18', 'hoang@gmail.com');
+
+INSERT INTO Teachers (full_name, email)
+VALUES
+('Nguyễn Văn A', 'nva@gmail.com'),
+('Trần Thị B', 'ttb@gmail.com'),
+('Lê Văn C', 'lvc@gmail.com'),
+('Phạm Thị D', 'ptd@gmail.com'),
+('Hoàng Văn E', 'hve@gmail.com');
+
+INSERT INTO Courses (course_name, course_description, total_lessons, teacher_id)
+VALUES
+('SQL Basic', 'Cơ bản SQL', 20, 1),
+('Java Core', 'Lập trình Java cơ bản', 25, 2),
+('Web Development', 'HTML CSS JS', 30, 3),
+('Data Structures', 'Cấu trúc dữ liệu', 28, 4),
+('Database Design', 'Thiết kế CSDL', 22, 5);
+
+INSERT INTO Enrollments (student_id, course_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 3),
+(4, 4),
+(5, 5);
+
+INSERT INTO Scores (student_id, course_id, midterm_score, final_score)
+VALUES
+(1, 1, 7.5, 8.0),
+(1, 2, 6.5, 7.0),
+(2, 1, 8.0, 8.5),
+(3, 3, 5.5, 6.0),
+(4, 4, 9.0, 9.5),
+(5, 5, 7.0, 7.5);
