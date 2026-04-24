@@ -114,3 +114,14 @@ WHERE student_id = ? AND course_id = ?;
 -- 2. Xóa lượt đăng ký học không hợp lệ
 DELETE FROM Enrollments
 WHERE student_id = ? AND course_id = ?;
+
+-- Lấy thông tin tất cả sinh viên
+SELECT * FROM Students;
+--Lấy thông tin giảng viên
+SELECT * FROM Teachers;
+-- Lấy danh sách các khóa học
+SELECT * FROM Courses;
+-- Lấy thông tin các lượt đăng ký khóa học
+SELECT * FROM Enrollments;
+-- Lấy thông tin các lần đánh giá kết quả
+SELECT * FROM Scores;
