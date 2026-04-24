@@ -109,11 +109,11 @@ WHERE student_id = 5 AND course_id = 5;
 
 -- 1. Xóa kết quả học tập trước (nếu có)
 DELETE FROM Scores
-WHERE student_id = ? AND course_id = ?;
+WHERE student_id = 2 AND course_id = 1;
 
 -- 2. Xóa lượt đăng ký học không hợp lệ
 DELETE FROM Enrollments
-WHERE student_id = ? AND course_id = ?;
+WHERE student_id = 4 AND course_id = 4;
 
 -- Lấy thông tin tất cả sinh viên
 SELECT * FROM Students;
